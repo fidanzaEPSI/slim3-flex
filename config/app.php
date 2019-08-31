@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
     'settings' => [
@@ -28,5 +28,6 @@ return [
         'App\Providers\ViewShareServiceProvider',
         'App\Providers\PaginationServiceProvider',
         'App\Providers\MailServiceProvider',
+        'App\Providers\LoggerServiceProvider'
     ]
 ];
