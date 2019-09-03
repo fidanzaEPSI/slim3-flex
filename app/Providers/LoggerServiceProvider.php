@@ -23,8 +23,8 @@ class LoggerServiceProvider extends AbstractServiceProvider
         $container = $this->getContainer();
         $config = $container->get('config');
         $container->share(LoggerInterface::class, function () use ($config) {
-            $log = new Logger($config->get('log.channel_name'));
-            $log->pushHandler(new StreamHandler($config->get('log.path'), Logger::WARNING));
+            $log = new Logger($config->get('log.name'));
+            $log->pushHandler(new StreamHandler($config->get('log.path'), $config->get('log.level')));
             return $log;
         });
     }

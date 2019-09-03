@@ -1,8 +1,11 @@
 <?php
 
+use Monolog\Logger;
+
 return [
     'log' => [
-        'channel_name' => 'app',
-        'path' => base_path('storage/logs/app.log')
+        'name' => 'app',
+        'path' => base_path('storage/logs/app.log'),
+        'level' => Logger::DEBUG
     ]
 ];
